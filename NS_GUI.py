@@ -12,6 +12,7 @@ def show_application():
     """
     root = Tk()
 
+
     frame_start = Frame(master=root, pady=30, padx=30)
     frame_departures = create_departures_frame(root, frame_start)
 
@@ -41,6 +42,25 @@ def create_departures_frame(root, frame_previous):
     """
     frame_departures = Frame(master=root, pady=40, padx=40)
 
+    label = Label(master=frame_departures, height=50, width=100)
+    label.pack()
+
+    button1 = Button(master=frame_departures, text='Vertrektijden laden')
+    button1.pack(pady=10, padx=10)
+    button1.place(x=275, y=50)
+
+    entry1 = Entry(master=frame_departures)
+    entry1.pack(padx=10, pady=10)
+    entry1.place(x=270, y=20)
+
+    button2 = Button(master=frame_departures, text='Terug naar hoofdscherm', command=frame_previous.tkraise)
+    button2.pack(pady=10, padx=10)
+    button2.place(x=250, y=650)
+
+    entry2 = Entry(master=frame_departures)
+    entry2.pack(padx=10, pady=10)
+    entry2.place(x=50, y=100, height=500, width=600)
+
     return frame_departures
 
 
@@ -67,3 +87,5 @@ def load_departures_NS(station):
     vertrektijden!
     """
     pass
+
+show_application()
