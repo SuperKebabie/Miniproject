@@ -29,5 +29,3 @@ button.pack(pady=10)
 
 
 root.mainloop()
-
-print('hallo')
