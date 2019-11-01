@@ -1,4 +1,10 @@
 from tkinter import *
+import RPI.GPIO as GPIO
+
+#init pin layout for raspberry pi connectivity
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+#set GPIO.output(18, True) to enable light (and false to disable light)
 
 
 def show_application():
