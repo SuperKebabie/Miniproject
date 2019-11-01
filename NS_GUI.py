@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(18, GPIO.OUT)
 #set GPIO.output(18, True) to enable light (and false to disable light)
 
-
+GPIO.output(18, True)
 def show_application():
     """Toon de GUI.
 
